@@ -6,13 +6,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -35,11 +34,14 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
     String id_user, username_db, nama, alamat,email;
     AnimationDrawable animationDrawable;
-
+    Button btnlogin,btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
+        btnlogin = findViewById(R.id.bt_signin);
+        btnRegister = findViewById(R.id.bt_sign_signup);
+        Log.d("LOGIN","LOGIN");
         /*
         ConstraintLayout cl = (ConstraintLayout) findViewById(R.id.cl);
         animationDrawable =(AnimationDrawable) cl.getBackground();
@@ -56,16 +58,19 @@ public class MainActivity extends AppCompatActivity {
 
         //if user presses on login
         //calling the method login
-        findViewById(R.id.bt_signin).setOnClickListener(new View.OnClickListener() {
+        btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Log.d("LOGIN","LOGIN");
                 userLogin();
             }
         });
+        btnRegister.setOnClickListener(new View.OnClickListener() {
 
-        findViewById(R.id.bt_sign_signup).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("kode_item_rcv", "Register");
                 Intent intent = new Intent(MainActivity.this, Register.class);
                 startActivity(intent);
             }

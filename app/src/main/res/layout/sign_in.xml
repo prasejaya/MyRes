@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_img"
-    android:id = "@+id/cl"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -83,7 +82,7 @@
             android:layout_width="307dp"
             android:layout_height="51dp"
             android:background="@drawable/email_box"
-            android:ems="10"
+            android:textSize="18dp"
             android:fontFamily="@font/montserrat_regular"
             android:hint="@string/password"
             android:importantForAutofill="no"
@@ -97,7 +96,6 @@
             app:layout_constraintTop_toBottomOf="@+id/username_editTxt_signup"
             app:layout_constraintVertical_bias="0.2" />
 
-
         <Button
             android:id="@+id/bt_signin"
             style="@style/Widget.AppCompat.Button.Borderless"
@@ -106,14 +104,11 @@
             android:layout_gravity="center_vertical"
             android:alpha="1"
             android:background="@drawable/button_style"
-            android:enabled="false"
             android:fontFamily="@font/montserrat_semibold"
             android:includeFontPadding="false"
             android:lineSpacingExtra="0sp"
-            android:onClick="signIn"
             android:paddingTop="-50dp"
             android:text="@string/sign_in"
-            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
@@ -123,8 +118,7 @@
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pass_editTxt_signup"
-            app:layout_constraintVertical_bias="0.071"
-            tools:ignore="OnClick,RtlCompat" />
+            app:layout_constraintVertical_bias="0.071"/>
 
         <Button
             android:id="@+id/bt_sign_signup"
@@ -134,14 +128,12 @@
             android:layout_gravity="center_vertical"
             android:alpha="1"
             android:background="@drawable/button_style"
-            android:enabled="false"
+            android:enabled="true"
             android:fontFamily="@font/montserrat_semibold"
             android:includeFontPadding="false"
             android:lineSpacingExtra="0sp"
-            android:onClick="Sign UP"
             android:paddingTop="-50dp"
             android:text="@string/sign_up"
-            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
@@ -152,7 +144,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pass_editTxt_signup"
             app:layout_constraintVertical_bias="0.57"
-            tools:ignore="OnClick,RtlCompat" />
+            />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
