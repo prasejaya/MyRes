@@ -52,7 +52,7 @@ public class SharedPrefManager {
     public User getUser() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new User(
-                sharedPreferences.getInt(KEY_ID, -1),
+                sharedPreferences.getString(KEY_ID, null),
                 sharedPreferences.getString(KEY_USERNAME, null),
                 sharedPreferences.getString(KEY_EMAIL, null),
                 sharedPreferences.getString(KEY_ALAMAT, null),
