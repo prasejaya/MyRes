@@ -63,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Log.d("LOGIN","LOGIN");
-                userLogin();
+                //userLogin();
+                Intent intent = new Intent(MainActivity.this, Drawer.class);
+                startActivity(intent);
             }
         });
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //HttpsTrustManager.allowAllSSL();
+        Log.d("Login",ServerUrl.URL_LOGIN);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerUrl.URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
